@@ -21,6 +21,7 @@ jobs:
     - name: Install SDK
       run: |
         cd $HOME/theos
+        rm -rf sdks
         git clone --depth 1 https://github.com/theos/sdks.git sdks
 
     - name: Build Agent
