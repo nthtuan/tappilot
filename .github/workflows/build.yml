@@ -18,6 +18,11 @@ jobs:
         bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
         echo "THEOS=$HOME/theos" >> $GITHUB_ENV
 
+    - name: Install SDK
+      run: |
+        cd $HOME/theos
+        git clone --depth 1 https://github.com/theos/sdks.git sdks
+
     - name: Build Agent
       run: |
         cd agent
