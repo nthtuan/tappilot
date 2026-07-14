@@ -1,5 +1,6 @@
 export ARCHS = arm64 arm64e
 export TARGET = iphone:clang:14.5:13.0
+export TARGET_CODESIGN_FLAGS = -Sentitlements.plist
 
 INSTALL_TARGET_PROCESSES = tappilot-agent
 
