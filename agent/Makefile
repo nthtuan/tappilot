@@ -10,7 +10,7 @@ TOOL_NAME = tappilot-agent
 tappilot-agent_FILES = $(wildcard src/*.mm)
 tappilot-agent_CFLAGS = -fobjc-arc -std=c++17
 tappilot-agent_CCFLAGS = -std=c++17
-tappilot-agent_FRAMEWORKS = Foundation
+tappilot-agent_FRAMEWORKS = Foundation CFNetwork
 tappilot-agent_INSTALL_PATH = /usr/bin
 
 include $(THEOS_MAKE_PATH)/tool.mk

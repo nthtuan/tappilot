@@ -1,5 +1,5 @@
 import asyncio
-import websockets
+import socket
 import orjson
 import threading
 from typing import Optional, Callable
@@ -13,7 +13,8 @@ class NetworkManager:
         self.device = device
         self.logger = Logger()
         self.config = ConfigManager()
-        self.websocket: Optional[websockets.WebSocketClientProtocol] = None
+        self.reader: Optional[asyncio.StreamReader] = None
+        self.writer: Optional[asyncio.StreamWriter] = None
         self.message_callback = message_callback
         self._running = False
         self._heartbeat_task: Optional[asyncio.Task] = None
@@ -42,15 +43,15 @@ class NetworkManager:
         while self._running:
             try:
                 self.device.status = DeviceStatus.CONNECTING
-                uri = f"ws://{self.device.ip}:{self.device.port}"
-                self.logger.info(f"Connecting to {self.device.name} at {uri}")
-                async with websockets.connect(uri, ping_interval=None) as ws:
-                    self.websocket = ws
-                    self.device.status = DeviceStatus.CONNECTED
-                    self._reconnect_attempts = 0
-                    self.logger.info(f"Connected to {self.device.name}")
-                    self._heartbeat_task = asyncio.create_task(self._heartbeat())
-                    await self._listen()
+                self.logger.info(f"Connecting to {self.device.name} at {self.device.ip}:{self.device.port}")
+                reader, writer = await asyncio.open_connection(self.device.ip, self.device.port)
+                self.reader = reader
+                self.writer = writer
+                self.device.status = DeviceStatus.CONNECTED
+                self._reconnect_attempts = 0
+                self.logger.info(f"Connected to {self.device.name}")
+                self._heartbeat_task = asyncio.create_task(self._heartbeat())
+                await self._listen()
             except Exception as e:
                 self.logger.error(f"Connection error with {self.device.name}: {e}")
                 self.device.status = DeviceStatus.ERROR if self._reconnect_attempts >= self.config.settings.reconnect_attempts else DeviceStatus.RECONNECTING
@@ -65,19 +66,22 @@ class NetworkManager:
 
     async def _listen(self):
         try:
-            async for message in self.websocket:
+            while self._running:
+                data = await self.reader.read(4096)
+                if not data:
+                    break
                 try:
-                    data = orjson.loads(message)
-                    self.device.add_console_message(f"[RECV] {data}")
+                    parsed_data = orjson.loads(data)
+                    self.device.add_console_message(f"[RECV] {parsed_data}")
                     if self.message_callback:
-                        self.message_callback(self.device, data)
+                        self.message_callback(self.device, parsed_data)
                 except Exception as e:
                     self.logger.error(f"Failed to parse message from {self.device.name}: {e}")
         except Exception as e:
             self.logger.error(f"Listen error from {self.device.name}: {e}")
 
     async def _heartbeat(self):
-        while self._running and self.websocket and self.websocket.open:
+        while self._running and self.writer and not self.writer.is_closing():
             try:
                 await self.send_message({"type": "ping"})
                 await asyncio.sleep(self.config.settings.heartbeat_interval)
@@ -86,9 +90,11 @@ class NetworkManager:
                 break
 
     async def send_message(self, message: dict):
-        if self.websocket and self.websocket.open:
+        if self.writer and not self.writer.is_closing():
             try:
-                await self.websocket.send(orjson.dumps(message))
+                data = orjson.dumps(message)
+                self.writer.write(data)
+                await self.writer.drain()
                 self.device.add_console_message(f"[SEND] {message}")
             except Exception as e:
                 self.logger.error(f"Failed to send message to {self.device.name}: {e}")
@@ -104,8 +110,10 @@ class NetworkManager:
                 await self._heartbeat_task
             except asyncio.CancelledError:
                 pass
-        if self.websocket:
-            await self.websocket.close()
-            self.websocket = None
+        if self.writer:
+            self.writer.close()
+            await self.writer.wait_closed()
+            self.writer = None
+            self.reader = None
         self.device.status = DeviceStatus.DISCONNECTED
         self._running = False
