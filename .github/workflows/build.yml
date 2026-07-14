@@ -1,0 +1,30 @@
+name: Build iOS Agent
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Theos
+      run: |
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+        echo "THEOS=$HOME/theos" >> $GITHUB_ENV
+
+    - name: Build Agent
+      run: |
+        cd agent
+        make clean package
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: tappilot-agent-deb
+        path: agent/packages/*.deb

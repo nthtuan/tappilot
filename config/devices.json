@@ -1,0 +1,20 @@
+[
+  {
+    "uuid": "9ae24ef5-8df4-4446-9f29-db5552eda8d7",
+    "name": "Iphone 1",
+    "ip": "192.168.1.60",
+    "port": 5000
+  },
+  {
+    "uuid": "98afa65e-7cb8-4eea-95a3-e35ddeb27b62",
+    "name": "test",
+    "ip": "192.168.1.60",
+    "port": 8080
+  },
+  {
+    "uuid": "9e0fb549-4b03-4074-bf66-5261d608ef40",
+    "name": "iphone x",
+    "ip": "192.168.1.60",
+    "port": 8080
+  }
+]

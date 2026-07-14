@@ -1,0 +1,66 @@
+2026-07-13 09:56:30,684 - TapPilot - INFO - Settings saved successfully
+2026-07-13 09:57:27,724 - TapPilot - INFO - Devices saved successfully
+2026-07-13 09:57:27,724 - TapPilot - INFO - Added new device: Iphone 1 (192.168.1.60:5000
+2026-07-13 09:57:38,319 - TapPilot - INFO - Connecting to Iphone 1 at ws://192.168.1.60:5000
+2026-07-13 09:57:41,362 - TapPilot - ERROR - Connection error with Iphone 1: [WinError 1225] The remote computer refused the network connection
+2026-07-13 09:57:41,362 - TapPilot - INFO - Reconnecting to Iphone 1 (attempt 1/3) in 2s
+2026-07-13 09:57:43,373 - TapPilot - INFO - Connecting to Iphone 1 at ws://192.168.1.60:5000
+2026-07-13 09:57:45,563 - TapPilot - ERROR - Connection error with Iphone 1: [WinError 1225] The remote computer refused the network connection
+2026-07-13 09:57:45,564 - TapPilot - INFO - Reconnecting to Iphone 1 (attempt 2/3) in 2s
+2026-07-13 09:57:47,568 - TapPilot - INFO - Connecting to Iphone 1 at ws://192.168.1.60:5000
+2026-07-13 09:57:49,735 - TapPilot - ERROR - Connection error with Iphone 1: [WinError 1225] The remote computer refused the network connection
+2026-07-13 09:57:49,735 - TapPilot - INFO - Reconnecting to Iphone 1 (attempt 3/3) in 2s
+2026-07-13 09:57:51,747 - TapPilot - INFO - Connecting to Iphone 1 at ws://192.168.1.60:5000
+2026-07-13 09:57:54,471 - TapPilot - ERROR - Connection error with Iphone 1: [WinError 1225] The remote computer refused the network connection
+2026-07-13 09:58:27,493 - TapPilot - INFO - Running all scripts
+2026-07-13 09:58:30,643 - TapPilot - INFO - Running all scripts
+2026-07-13 09:59:06,320 - TapPilot - INFO - Settings saved successfully
+2026-07-13 15:46:43,212 - TapPilot - INFO - [9ae24ef5-8df4-4446-9f29-db5552eda8d7] Lua engine initialized
+2026-07-13 15:46:43,212 - TapPilot - INFO - Registered Lua engine for device: 9ae24ef5-8df4-4446-9f29-db5552eda8d7
+2026-07-13 15:47:39,367 - TapPilot - INFO - Devices saved successfully
+2026-07-13 15:47:39,367 - TapPilot - INFO - Added new device: test (192.168.1.60:8080
+2026-07-13 15:47:46,114 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:46,361 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:46,361 - TapPilot - INFO - Reconnecting to test (attempt 1/3) in 2s
+2026-07-13 15:47:48,365 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:48,493 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:48,494 - TapPilot - INFO - Reconnecting to test (attempt 2/3) in 2s
+2026-07-13 15:47:50,500 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:50,666 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:50,666 - TapPilot - INFO - Reconnecting to test (attempt 3/3) in 2s
+2026-07-13 15:47:52,679 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:52,693 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:57,129 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:57,358 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:57,358 - TapPilot - INFO - Reconnecting to test (attempt 1/3) in 2s
+2026-07-13 15:47:59,371 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:47:59,524 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:47:59,525 - TapPilot - INFO - Reconnecting to test (attempt 2/3) in 2s
+2026-07-13 15:48:01,532 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:01,571 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:01,572 - TapPilot - INFO - Reconnecting to test (attempt 3/3) in 2s
+2026-07-13 15:48:03,576 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:03,848 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:44,193 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:44,209 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:44,209 - TapPilot - INFO - Reconnecting to test (attempt 1/3) in 2s
+2026-07-13 15:48:46,214 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:46,842 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:46,843 - TapPilot - INFO - Reconnecting to test (attempt 2/3) in 2s
+2026-07-13 15:48:48,853 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:49,293 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:49,294 - TapPilot - INFO - Reconnecting to test (attempt 3/3) in 2s
+2026-07-13 15:48:51,298 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:51,441 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:55,919 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:56,386 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:56,387 - TapPilot - INFO - Reconnecting to test (attempt 1/3) in 2s
+2026-07-13 15:48:58,401 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:48:58,710 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:48:58,710 - TapPilot - INFO - Reconnecting to test (attempt 2/3) in 2s
+2026-07-13 15:49:00,714 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:49:00,864 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:49:00,864 - TapPilot - INFO - Reconnecting to test (attempt 3/3) in 2s
+2026-07-13 15:49:02,867 - TapPilot - INFO - Connecting to test at ws://192.168.1.60:8080
+2026-07-13 15:49:02,910 - TapPilot - ERROR - Connection error with test: server rejected WebSocket connection: HTTP 404
+2026-07-13 15:49:18,620 - TapPilot - INFO - Settings saved successfully

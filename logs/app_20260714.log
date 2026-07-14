@@ -1,0 +1,17 @@
+2026-07-14 08:35:26,775 - TapPilot - INFO - [9ae24ef5-8df4-4446-9f29-db5552eda8d7] Lua engine initialized
+2026-07-14 08:35:26,776 - TapPilot - INFO - Registered Lua engine for device: 9ae24ef5-8df4-4446-9f29-db5552eda8d7
+2026-07-14 08:35:26,776 - TapPilot - INFO - [98afa65e-7cb8-4eea-95a3-e35ddeb27b62] Lua engine initialized
+2026-07-14 08:35:26,776 - TapPilot - INFO - Registered Lua engine for device: 98afa65e-7cb8-4eea-95a3-e35ddeb27b62
+2026-07-14 08:35:57,127 - TapPilot - INFO - Devices saved successfully
+2026-07-14 08:35:57,128 - TapPilot - INFO - Added new device: iphone x (192.168.1.60:8080
+2026-07-14 08:36:06,833 - TapPilot - INFO - Connecting to iphone x at ws://192.168.1.60:8080
+2026-07-14 08:36:06,993 - TapPilot - ERROR - Connection error with iphone x: server rejected WebSocket connection: HTTP 404
+2026-07-14 08:36:06,993 - TapPilot - INFO - Reconnecting to iphone x (attempt 1/3) in 2s
+2026-07-14 08:36:09,009 - TapPilot - INFO - Connecting to iphone x at ws://192.168.1.60:8080
+2026-07-14 08:36:09,321 - TapPilot - ERROR - Connection error with iphone x: server rejected WebSocket connection: HTTP 404
+2026-07-14 08:36:09,322 - TapPilot - INFO - Reconnecting to iphone x (attempt 2/3) in 2s
+2026-07-14 08:36:11,335 - TapPilot - INFO - Connecting to iphone x at ws://192.168.1.60:8080
+2026-07-14 08:36:11,474 - TapPilot - ERROR - Connection error with iphone x: server rejected WebSocket connection: HTTP 404
+2026-07-14 08:36:11,475 - TapPilot - INFO - Reconnecting to iphone x (attempt 3/3) in 2s
+2026-07-14 08:36:13,480 - TapPilot - INFO - Connecting to iphone x at ws://192.168.1.60:8080
+2026-07-14 08:36:14,012 - TapPilot - ERROR - Connection error with iphone x: server rejected WebSocket connection: HTTP 404

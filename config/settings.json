@@ -1,0 +1,14 @@
+{
+  "theme": "dark",
+  "language": "vi",
+  "window_width": 1200,
+  "window_height": 800,
+  "window_x": 394,
+  "window_y": 46,
+  "heartbeat_interval": 5,
+  "reconnect_attempts": 3,
+  "reconnect_delay": 2,
+  "auto_update": false,
+  "cache_enabled": true,
+  "log_level": "INFO"
+}

@@ -1,0 +1,9 @@
+Package: com.tappilot.agent
+Name: Tappilot Agent
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Tappilot Jailbreak Agent
+Maintainer: Your Name
+Author: Your Name
+Section: Tweaks
