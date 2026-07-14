@@ -47,13 +47,13 @@
 }
 
 - (void)handlePing {
-    NSDictionary *response = @{@"type": @"pong", @"timestamp": @([[NSDate date] timeIntervalSince1970])};
+    __unused NSDictionary *response = @{@"type": @"pong", @"timestamp": @([[NSDate date] timeIntervalSince1970])};
     // Send response via WebSocket server (placeholder)
     [[TPLogger sharedLogger] log:@"Responding to ping"];
 }
 
 - (void)handleStatus {
-    NSDictionary *status = @{
+    __unused NSDictionary *status = @{
         @"type": @"status",
         @"status": @"running",
         @"timestamp": @([[NSDate date] timeIntervalSince1970])
@@ -99,7 +99,7 @@
 
 - (void)handleListScripts {
     NSArray *scripts = [[TPLuaManager sharedManager] listScripts];
-    NSDictionary *response = @{@"type": @"scripts", @"scripts": scripts};
+    __unused NSDictionary *response = @{@"type": @"scripts", @"scripts": scripts};
     [[TPLogger sharedLogger] log:[NSString stringWithFormat:@"Listing %lu scripts", (unsigned long)scripts.count]];
 }
 
